@@ -1,0 +1,17 @@
+{
+  "name": "bluetooth-chrome-extension-test",
+  "description" : "Bluetooth Chrome Extension Test",
+  "version": "1.0",
+  "permissions": [
+    "https://mail.google.com/mail/*"
+  ],
+  "manifest_version": 2,
+  "content_scripts": [
+    {
+      "all_frames": true,
+      "js": ["content_script.js"],
+      "matches": ["https://mail.google.com/mail/*"],
+      "run_at": "document_idle"
+    }
+  ]
+}
